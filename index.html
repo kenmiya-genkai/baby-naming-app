@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>赤ちゃん名付け支援</title><link rel="stylesheet" href="style.css"></head>
+<body><main><header><h1>赤ちゃん名付け支援</h1><p>候補をまとめて入力して、画数を比較できます。</p></header>
+<section class="inputs"><label>名字（漢字）<input id="surname" autocomplete="off" placeholder="例：宮本"></label><label>名前候補（1行に1候補。読みはスペースの後に任意入力）<textarea id="candidates" rows="5" placeholder="賢児 けんじ&#10;怜奈 れな"></textarea></label></section>
+<p class="notice">姓名判断の画数の数え方・判定は流派により異なる場合があります。</p>
+<section class="list"><div class="controls"><label>並べ替え <select id="sort"><option value="score">吉の数順</option><option value="sou">総格順</option><option value="name">名前順</option></select></label><label><input id="favorites-only" type="checkbox"> お気に入りだけ表示</label></div><p id="empty" class="empty"></p><div class="table-wrap"><table><thead><tr><th>候補</th><th>読み</th><th>天格</th><th>人格</th><th>地格</th><th>外格</th><th>総格</th><th>吉の数</th><th>★</th><th>内訳</th></tr></thead><tbody id="results"></tbody></table></div></section>
+<footer><p>漢字データ：KANJIDIC2（EDRDG）。ライセンス: KANJIDIC2 data is distributed under the terms of the EDRDG licence.</p><p>吉凶表は一般的な熊崎式の二次的な整理表を実装。大凶は凶に統合し、一覧にない画数は半吉として扱います。</p></footer></main>
+<script src="data/kanji-data.js"></script><script src="data/exceptions.js"></script><script src="data/luck.js"></script><script src="logic.js"></script><script src="app.js"></script></body></html>
